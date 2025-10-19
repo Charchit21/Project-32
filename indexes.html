@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cozy Corner - Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">The Cozy Corner</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" id="reservation-link">Reservations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>Welcome to The Cozy Corner</h1>
+            <p>Where every meal feels like home. Fresh ingredients, warm atmosphere.</p>
+            <button onclick="greetUser()">Explore Our Menu</button>
+        </section>
+
+        <hr>
+
+        <section id="menu" class="menu-section">
+            <h2>Our Signature Menu</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Classic Burger</h3>
+                    <p>Juicy beef patty, melted cheddar, lettuce, and our secret sauce.</p>
+                    <span class="price">$12.99</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Garden Salad</h3>
+                    <p>Crisp mixed greens, seasonal vegetables, and a light vinaigrette.</p>
+                    <span class="price">$9.50</span>
+                </div>
+                <div class="menu-item">
+                    <h3>Truffle Pasta</h3>
+                    <p>Homemade pasta tossed in a creamy truffle mushroom sauce.</p>
+                    <span class="price">$18.00</span>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="contact" class="contact-section">
+            <h2>Find Us</h2>
+            <p>📍 123 Main Street, Anytown, India</p>
+            <p>📞 +91 10000-00001</p>
+            <p>📧 info@cozycorner.com</p>
+            <div class="hours">
+                <h3>Hours</h3>
+                <p>Mon - Fri: 11:00 AM - 10:00 PM</p>
+                <p>Sat - Sun: 9:00 AM - 11:00 PM</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 The Cozy Corner. All rights reserved.</p>
+    </footer>
+
+    <script>
+  
+        function greetUser() {
+            alert('Thank you for your interest! Scroll down to see our full menu.');
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const reservationLink = document.getElementById('reservation-link');
+
+            if (reservationLink) {
+                reservationLink.addEventListener('click', (e) => {
+                    e.preventDefault(); 
+                    alert('To make a reservation, please call us at (555) 123-4567 or check back soon for our online booking tool!');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
